@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración</title>
+</head>
+
+<body>
+    <header>
+        <h1>⚙️ Panel de Administración</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Volver a la Tienda</a></li>
+                <li><a href="#">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <!-- TABLA DE PRODUCTOS-->
+        <section>
+            <h2>Gestión de Productos</h2>
+            <button type="submit">+ Nuevo Producto</button><br><br>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Categoría</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><img src="./assets/imagen-hamburguesa.jpg" width="50px" height="50 px"
+                                alt="Imagen de Hamburguesa"></td>
+                        <td>Hamburguesa Triple</td>
+                        <td>Hamburguesas</td>
+                        <td>$25000</td>
+                        <td>12</td>
+                        <td><a href="#">Editar</a> | <a href="#">Eliminar</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><img src="./assets/imagen-pizza.jpg" width="50px" height="50 px"
+                                alt="Imagen de Pizza de Muzarella"></td>
+                        <td>Pizza Muzarella</td>
+                        <td>Pizzas</td>
+                        <td>$18000</td>
+                        <td>5</td>
+                        <td><a href="#">Editar</a> | <a href="#">Eliminar</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><img src="./assets/imagen-papas-fritas.jpg" width="50px" height="50 px"
+                                alt="Imagen de Papas Fritas"></td>
+                        <td>Papas Fritas</td>
+                        <td>Papas Fritas</td>
+                        <td>$8000</td>
+                        <td>0</td>
+                        <td><a href="#">Editar</a> | <a href="#">Eliminar</a></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><img src="./assets/imagen-bebida.jpg" width="50px" height="50 px"
+                                alt="Imagen de Bebida: Lata de gaseosa Coca Cola"></td>
+                        <td>Lata de Gaseosa Coca Cola</td>
+                        <td>Bebidas</td>
+                        <td>$3000</td>
+                        <td>25</td>
+                        <td><a href="#">Editar</a> | <a href="#">Eliminar</a></td>
+                    </tr>
+                </tbody>
+            </table><br>
+        </section>
+
+        <hr>
+
+        <!-- FORMULARIO -->
+        <section>
+            <h3>📝 Agregar Producto Rápido</h3><br>
+
+            <form id="formulario">
+                <label for="nombre">Nombre del Producto:</label><br>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej: Lomito Completo" required
+                    title="Solo letras, mínimo 3 caracteres"><br><br>
+
+                <label for="precio">Precio:</label><br>
+                <input type="number" id="precio" name="precio" required><br><br>
+
+                <label for="stock">Stock Inicial:</label><br>
+                <input type="number" id="stock" name="stock" required><br><br>
+
+                <label for="categoria">Categoría:</label><br>
+                <select name="categoria" id="categoria" required>
+                    <option value="" disabled selected>Seleccione una opción...</option>
+                    <option value="hamburguesas">Hamburguesas</option>
+                    <option value="pizzas">Pizzas</option>
+                    <option value="papas-fritas">Papas Fritas</option>
+                    <option value="bebidas">Bebidas</option>
+                    <option value="bebidas">Otra</option>
+                </select><br><br>
+
+                <label for="descripcion">Descripción:</label><br>
+                <textarea id="descripcion" name="descripcion" rows="4" cols="50px" required
+                    placeholder="Ingresa los ingredientes ..."></textarea><br><br>
+
+                <button type="submit">Guardar Producto</button><br><br>
+            </form>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Panel de Administración -Food Store v1.0</p>
+    </footer>
+</body>
+
+</html>
